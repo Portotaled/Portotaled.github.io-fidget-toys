@@ -115,13 +115,11 @@
         <section class="hero">
             <h2>Revere Fidget Toys</h2>
             <p>We operate at Paul Revere Middle School, within all 5 days of the week</p>
-            <p></p>
             <p>Deliveries are made before school, during nutrition/lunch, and after school up to 3:45</p>
         </section>
 
         <section id="home">
             <h2>Home</h2>
-            <p></p>
             <p>Whether you're looking for the perfect desk toy or a gift for someone special, we have something for everyone.</p>
         </section>
 
@@ -198,21 +196,32 @@
 </section>
 
 <script>
-const scriptURL = "https://docs.google.com/spreadsheets/d/1-0wQShQsrdipu9G_jdBwL8PufZMsHzTucZp9P_nNKtg/edit?gid=0#gid=0";
+
+const scriptURL = "https://script.google.com/macros/s/AKfycbzekwG5icqOAAPmWhfbBCY2TgHG0ofOAcx1mAVUFh9_nHAdh97jfghL2SsKw3jCWyMEbg/exec";
 const form = document.getElementById("ideaForm");
 
 form.addEventListener("submit", e => {
     e.preventDefault();
 
+    const formData = new FormData(form);
+    const params = new URLSearchParams();
+    formData.forEach((value, key) => {
+        params.append(key, value);
+    });
+
     fetch(scriptURL, {
         method: "POST",
-        body: new FormData(form)
+        mode: 'no-cors',        
+        body: params
     })
-    .then(response => {
+    .then(() => {
         alert("Idea submitted successfully!");
         form.reset();
     })
-    .catch(error => alert("Error submitting idea"));
+    .catch(error => {
+        console.error("submission error", error);
+        alert("Error submitting idea");
+    });
 });
 </script>
     </main>
