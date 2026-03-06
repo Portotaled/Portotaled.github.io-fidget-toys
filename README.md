@@ -1,4 +1,4 @@
-# Portotaled.github.io-fidget-toys
+# fidget-toys
 ![Bao](Clicker-Bao.png)
 ![Creme Sandwich](Clicker-Creme-Sandwich.png)
 ![Hot Cocoa](Clicker-Cocoa.png)
