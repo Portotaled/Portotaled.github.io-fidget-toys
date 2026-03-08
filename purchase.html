@@ -115,12 +115,47 @@
 
         <section>
             <h2>Shopping List</h2>
-
-            <ul id="itemList"></ul>
-
-            <div id="totalBox">
-                Total: $0
+            
             </div>
+            <form id="checkout" style="margin-top: 1rem;">
+                <ul id="itemList"></ul>
+                <div id="totalBox">
+                Total: $0
+                </div>
+                <button type="Submit Order"
+                style="background:#4CAF50;color:white;padding:0.75rem 1.5rem;border:none;border-radius:4px;cursor:pointer;font-size:1rem;">
+                Submit Idea
+                </button>
+            </form>
+            <script>
+
+                const scriptURL = "https://script.google.com/macros/s/AKfycbzHtwbASVQnD3V9Pa13KKXGagjcVDhNfbSVkbZ2uWcxwh2vwWlEqhg_OFmtwoXAl7_52w/exec";
+                const form = document.getElementById("checkout");
+                
+                form.addEventListener("submit", e => {
+                    e.preventDefault();
+                
+                    const formData = new FormData(form);
+                    const params = new URLSearchParams();
+                    formData.forEach((value, key) => {
+                        params.append(key, value);
+                    });
+                
+                    fetch(scriptURL, {
+                        method: "POST",
+                        mode: 'no-cors',        
+                        body: params
+                    })
+                    .then(() => {
+                        alert("Idea submitted successfully!");
+                        form.reset();
+                    })
+                    .catch(error => {
+                        console.error("submission error", error);
+                        alert("Error submitting idea");
+                    });
+                });
+            </script>
         </section>
 
         <section id="clickers">
