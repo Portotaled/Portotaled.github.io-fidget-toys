@@ -1,220 +1,194 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revere Fidget Emporium</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revere Fidget Emporium</title>
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-        header {
-            background: #333;
-            color: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
+body{
+font-family:Arial,sans-serif;
+line-height:1.6;
+color:#333;
+}
 
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
+header{
+background:#333;
+color:white;
+padding:1rem 0;
+}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
+nav{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 20px;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
+nav ul{
+list-style:none;
+display:flex;
+gap:2rem;
+}
 
-        nav a:hover {
-            color: #4CAF50;
-        }
+nav a{
+color:white;
+text-decoration:none;
+}
 
-        main {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 20px;
-        }
+main{
+max-width:1200px;
+margin:2rem auto;
+padding:0 20px;
+}
 
-        .hero {
-            background: #4CAF50;
-            color: white;
-            padding: 3rem;
-            border-radius: 8px;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
+.hero{
+background:#4CAF50;
+color:white;
+padding:3rem;
+border-radius:8px;
+text-align:center;
+margin-bottom:3rem;
+}
 
-        section {
-            margin-bottom: 3rem;
-        }
+.product-item{
+background:#f4f4f4;
+padding:1rem;
+border-radius:8px;
+border-left:4px solid #4CAF50;
+margin-bottom:1rem;
+}
 
-        section h2 {
-            color: #4CAF50;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #4CAF50;
-            padding-bottom: 0.5rem;
-        }
-
-        .product-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin: 1rem 0;
-        }
-
-        .product-item {
-            background: #f4f4f4;
-            padding: 1rem;
-            border-radius: 8px;
-            border-left: 4px solid #4CAF50;
-        }
-
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-    </style>
+button{
+background:#4CAF50;
+color:white;
+padding:0.75rem 1.5rem;
+border:none;
+border-radius:4px;
+cursor:pointer;
+font-size:1rem;
+margin-top:5px;
+}
+</style>
 </head>
-<body>
-    <ul id="Customer_List">
-    </ul>
-    <header>
-        <nav>
-            <h1>Revere Fidget Toys</h1>
-        </nav>
-        <ul>
-            <li><a href="#clickers">Clickers</a></li>
-            <li><a href="#other">Other</a></li>
-            <li><a href="#propeller">Propeller</a></li>
-        </ul>
-    </header>
 
-    <main>
-        <section class="hero">
-            <h2>Purchasing Window</h2>
-            <p>All purchases are registered and will be deliverd within school. Delays may occur.</p>
-        </section>
-        <section id="shopping-list">
-            <h2>Shopping List</h2>
-            <div style="margin-bottom: 1rem;">
-                <input type="text" id="itemInput" placeholder="Enter item name" style="padding:0.5rem;font-size:1rem;width:100%;max-width:300px;">
-                <button id="addButton" style="background:#4CAF50;color:white;padding:0.5rem 1rem;border:none;border-radius:4px;cursor:pointer;font-size:1rem;margin-left:0.5rem;">Add to List</button>
-            </div>
-            <ul id="itemList" style="margin-left: 1.5rem;"></ul>
-        </section>
-        <section id="clickers">
-            <h2>Clickers</h2>
-            <div class="product-item">
-                <strong>Pizza</strong>
-                <p>Price:$3</p>
-                <button type="add2list"
-                style="background:#4CAF50;color:white;padding:0.75rem 1.5rem;border:none;border-radius:4px;cursor:pointer;font-size:1rem;">
-                Add to Shopping List
-                </button>
-                <script src="script.js"></script>
-                <img src="Clicker-Pizza.png" alt="Pizza" width="250">
-            </div>
-            <div class="product-item">
-                <strong>Ramen Clicker</strong>
-                <p>Price:$4</p>
-                <button type="add2list"
-                style="background:#4CAF50;color:white;padding:0.75rem 1.5rem;border:none;border-radius:4px;cursor:pointer;font-size:1rem;">
-                Add to Shopping List
-                </button>
-                <script src="script.js"></script>
-                <img src="Clicker-Ramen.png" alt="Ramen" width="250">
-            </div>
-            <div class="product-item">
-                <strong>Coke Crate</strong>
-                <p>Price:$3</p>
-                <button type="add2list"
-                style="background:#4CAF50;color:white;padding:0.75rem 1.5rem;border:none;border-radius:4px;cursor:pointer;font-size:1rem;">
-                Add to Shopping List
-                </button>
-                <script src="script.js"></script>
-                <img src="Clicker-Coke-Crate.png" alt="Coca-Cola" width="250">
-            </div>
-            <div class="product-item">
-                <strong>Keyboard</strong>
-                <p>Price:$5</p>
-                <button type="add2list"
-                style="background:#4CAF50;color:white;padding:0.75rem 1.5rem;border:none;border-radius:4px;cursor:pointer;font-size:1rem;">
-                Add to Shopping List
-                </button>
-                <script src="script.js"></script>
-                <img src="Clicker-Keyboard.png" alt="Keyboard" width="250">
-            </div>
-            <div class="product-item">
-                <strong>Rice</strong>
-                <p>Price:$3</p>
-                <button type="add2list"
-                style="background:#4CAF50;color:white;padding:0.75rem 1.5rem;border:none;border-radius:4px;cursor:pointer;font-size:1rem;">
-                Add to Shopping List
-                </button>
-                <script src="script.js"></script>
-                <img src="Clicker-Rice.png" alt="Rice" width="250">
-            </div>
-            <div class="product-item">
-                <strong>Hot Cocoa</strong>
-                <p>Price:$2</p>
-                <button type="add2list"
-                style="background:#4CAF50;color:white;padding:0.75rem 1.5rem;border:none;border-radius:4px;cursor:pointer;font-size:1rem;">
-                Add to Shopping List
-                </button>
-                <script src="script.js"></script>
-                <img src="Clicker-Cocoa.png" alt="Hot Cocoa" width="250">
-            </div>
-        </section>
-        <section id="other">
-            <h2>Other</h2>
-            <div class="product-item">
-                <strong>Extendable Eggs</strong>
-                <p>Price:$5</p>
-                <button type="add2list"
-                style="background:#4CAF50;color:white;padding:0.75rem 1.5rem;border:none;border-radius:4px;cursor:pointer;font-size:1rem;">
-                Add to Shopping List
-                </button>
-                <script src="script.js"></script>
-                <img src="Fidget-Egg.png" alt="Egg Fidget" width="250">
-            <img src="Fidget-Egg-Extended.png" alt="Egg Fidget Long" width="250">
-            </div>
-        </section>
-        <section id="propeller">
-            <h2>Propeller</h2>
-            <div class="product-item">
-                <strong>Propeller Launcher</strong>
-                <p>Price:$6, +2 for additional upgrade propeller.</p>
-                <button type="add2list"
-                style="background:#4CAF50;color:white;padding:0.75rem 1.5rem;border:none;border-radius:4px;cursor:pointer;font-size:1rem;">
-                Add to Shopping List
-                </button>
-                <script src="script.js"></script>
-            </div>
-        </section>
-    </main>   
+<body>
+
+<header>
+<nav>
+<h1>Revere Fidget Toys</h1>
+<ul>
+<li><a href="#clickers">Clickers</a></li>
+<li><a href="#other">Other</a></li>
+<li><a href="#propeller">Propeller</a></li>
+</ul>
+</nav>
+</header>
+
+<main>
+
+<section class="hero">
+<h2>Purchasing Window</h2>
+<p>All purchases are registered and will be delivered within school.</p>
+</section>
+
+<section>
+<h2>Shopping List</h2>
+<ul id="itemList"></ul>
+</section>
+
+<section id="clickers">
+<h2>Clickers</h2>
+
+<div class="product-item">
+<strong>Pizza</strong>
+<p>Price: $3</p>
+<button class="add-btn" data-product="Pizza">Add to Shopping List</button>
+</div>
+
+<div class="product-item">
+<strong>Ramen Clicker</strong>
+<p>Price: $4</p>
+<button class="add-btn" data-product="Ramen Clicker">Add to Shopping List</button>
+</div>
+
+<div class="product-item">
+<strong>Coke Crate</strong>
+<p>Price: $3</p>
+<button class="add-btn" data-product="Coke Crate">Add to Shopping List</button>
+</div>
+
+<div class="product-item">
+<strong>Keyboard</strong>
+<p>Price: $5</p>
+<button class="add-btn" data-product="Keyboard">Add to Shopping List</button>
+</div>
+
+<div class="product-item">
+<strong>Rice</strong>
+<p>Price: $3</p>
+<button class="add-btn" data-product="Rice">Add to Shopping List</button>
+</div>
+
+<div class="product-item">
+<strong>Hot Cocoa</strong>
+<p>Price: $2</p>
+<button class="add-btn" data-product="Hot Cocoa">Add to Shopping List</button>
+</div>
+
+</section>
+
+<section id="other">
+<h2>Other</h2>
+
+<div class="product-item">
+<strong>Extendable Eggs</strong>
+<p>Price: $5</p>
+<button class="add-btn" data-product="Extendable Eggs">Add to Shopping List</button>
+</div>
+
+</section>
+
+<section id="propeller">
+<h2>Propeller</h2>
+
+<div class="product-item">
+<strong>Propeller Launcher</strong>
+<p>Price: $6 (+2 for upgrade propeller)</p>
+<button class="add-btn" data-product="Propeller Launcher">Add to Shopping List</button>
+</div>
+
+</section>
+
+</main>
+
+<script>
+const buttons = document.querySelectorAll(".add-btn");
+
+buttons.forEach(button=>{
+button.addEventListener("click",function(){
+
+const productName = this.dataset.product;
+const list = document.getElementById("itemList");
+
+const li = document.createElement("li");
+li.textContent = productName;
+
+list.appendChild(li);
+
+});
+});
+</script>
+
 </body>
 </html>
-  
+```
