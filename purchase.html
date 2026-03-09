@@ -310,37 +310,35 @@
 
     function sendOrder(){
 
-        const name = document.getElementById("customerName").value;
+    const name = document.getElementById("customerName").value;
+    const cart = products.join(", ");
 
-        const cart = products.join(", ");
+    const data = new URLSearchParams();
 
-        fetch(WEB_APP_URL, {
+    data.append("name", name);
+    data.append("cart", cart);
 
-            method: "POST",
+    fetch(WEB_APP_URL, {
 
-            body: JSON.stringify({
+        method: "POST",
+        body: data
 
-                name: name,
-                cart: cart
+    })
+    .then(response => response.text())
+    .then(result => {
 
-            })
+        console.log(result);
+        alert("Order sent successfully!");
 
-        })
-        .then(response => response.text())
-        .then(data => {
+    })
+    .catch(error => {
 
-            console.log("Server response:", data);
+        console.error(error);
+        alert("Order failed to send.");
 
-            alert("Order sent!");
+    });
 
-        })
-        .catch(error => {
-
-            console.error("Error:", error);
-
-        });
-
-    }
+}
 
 </script>
 
