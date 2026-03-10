@@ -10,5 +10,5 @@
 ![Spinner Ring](Clicker-Spinner-Ring.png)
 ![Egg](Fidget-Egg.png)
 ![Egg-Extended](Fidget-Egg-Extended.png)
-
+![Mouse Scroller](Mouse-Scroller.png)
 
