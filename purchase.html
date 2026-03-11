@@ -325,35 +325,25 @@
         
         
         function sendOrder(){
-        
+
             const name = document.getElementById("customerName").value;
             const promo = document.getElementById("promoCode").value;
         
             const cart = products.join(", ");
         
-            const data = new URLSearchParams();
+            const url =
+                WEB_APP_URL +
+                "?name=" + encodeURIComponent(name) +
+                "&cart=" + encodeURIComponent(cart) +
+                "&promo=" + encodeURIComponent(promo);
         
-            data.append("name", name);
-            data.append("cart", cart);
-            data.append("promo", promo || "");
-        
-            fetch(WEB_APP_URL, {
-        
-                method: "POST",
-                mode: "no-cors",
-                body: data
-        
-            })
+            fetch(url)
             .then(() => {
-        
-                alert("Order sent successfully!, Your product should arrive within 5 days.");
-        
+                alert("Order sent successfully! Your product should arrive within 5 days.");
             })
             .catch(error => {
-        
                 console.error(error);
                 alert("Order failed to send.");
-        
             });
         
         }
