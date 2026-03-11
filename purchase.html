@@ -321,20 +321,14 @@ buttons.forEach(button => {
 });
 
 
-async function sendOrder(){
+function sendOrder(event){
+
+    if(event){
+        event.preventDefault();
+    }
 
     const name = document.getElementById("customerName").value;
     const promo = document.getElementById("promoCode").value;
-
-    if(name.trim() === ""){
-        alert("Please enter your full name and homeroom.");
-        return;
-    }
-
-    if(products.length === 0){
-        alert("Your cart is empty.");
-        return;
-    }
 
     const cart = products.join(", ");
 
@@ -344,21 +338,12 @@ async function sendOrder(){
     data.append("cart", cart);
     data.append("promo", promo);
 
-    try{
+    fetch(WEB_APP_URL, {
+        method: "POST",
+        body: data
+    });
 
-        await fetch(WEB_APP_URL, {
-            method: "POST",
-            body: data
-        });
-
-        alert("Order sent successfully! Your product should arrive within 5 days.");
-
-    } catch(error){
-
-        console.error(error);
-        alert("Order failed to send.");
-
-    }
+    alert("Order sent successfully! Your product should arrive within 5 days.");
 
 }
 
