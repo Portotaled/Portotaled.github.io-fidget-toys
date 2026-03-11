@@ -140,6 +140,13 @@
                 type="text"
                 placeholder="Enter your full name, along with HR">
 
+            <br><br>
+
+            <input
+                id="promoCode"
+                type="text"
+                placeholder="Enter promo code (optional)">
+
             <p>Click "Place Order" Button Once as it takes a long time for it to load.</p>
 
             <button onclick="sendOrder()">
@@ -299,12 +306,15 @@
     function sendOrder(){
 
     const name = document.getElementById("customerName").value;
+    const promo = document.getElementById("promoCode").value;
+
     const cart = products.join(", ");
 
     const data = new URLSearchParams();
 
     data.append("name", name);
     data.append("cart", cart);
+    data.append("promo", promo);
 
     fetch(WEB_APP_URL, {
 
