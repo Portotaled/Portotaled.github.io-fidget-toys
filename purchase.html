@@ -116,228 +116,249 @@
 
     <main>
 
-        <section class="hero">
-            <h2>We offer a large variety of fidgets to use anytime</h2>
-        </section>
-
-        <section>
-
-            <h2>Shopping List</h2>
-
-        </section>
-
-        <div id="orderSection">
-
-            <h3>Your Cart</h3>
-
-            <ul id="itemList">
-            </ul>
-
+            <section class="hero">
+                <h2>We offer a large variety of fidgets to use anytime</h2>
+            </section>
+    
+            <section>
+                <h2>Shopping List</h2>
+            </section>
+    
+            <div id="orderSection">
+    
+        <h3>Your Cart</h3>
+    
+        <ul id="itemList">
+        </ul>
+    
+        <div id="totalBox">
+            Total: $0
+        </div>
+    
             <p>Be sure to write your full name and homeroom in the text box below.</p>
-
+        
             <input 
                 id="customerName"
                 type="text"
                 placeholder="Enter your full name, along with HR">
-
+        
             <br><br>
-
+        
             <input
                 id="promoCode"
                 type="text"
                 placeholder="Enter promo code (optional)">
-
+        
             <p>Click "Place Order" Button Once as it takes a long time for it to load.</p>
-
+        
             <button onclick="sendOrder()">
                 Place Order
             </button>
-
+        
         </div>
-
-        <section id="clickers">
-
-            <h2>Clickers</h2>
-
-            <div class="product-item">
-                <strong>Pizza</strong>
-                <img src="Clicker-Pizza.png" width="175">
-                <p>Price: $5</p>
-                <p>SOLD OUT! SORRY</p>
-            </div>
-
-            <div class="product-item">
-                <strong>Ramen Clicker</strong>
-                <img src="Clicker-Ramen.png" width="175">
-                <p>Price: $6</p>
-                <p>SOLD OUT! SORRY</p>
-            </div>
-
-            <div class="product-item">
-                <strong>Coke Crate</strong>
-                <img src="Clicker-Coke-Crate.png" width="175">
-                <p>Price: $5</p>
-                <p>SOLD OUT! SORRY</p>
-            </div>
-
-            <div class="product-item">
-                <strong>Keyboard</strong>
-                <img src="Clicker-Keyboard.png" width="175">
-                <p>Price: $5</p>
-                <button class="add-btn" data-product="Keyboard" data-price="5">
-                    Add to Shopping List
-                </button>
-            </div>
-
-            <div class="product-item">
-                <strong>Rice</strong>
-                <img src="Clicker-Rice.jpeg" width="175">
-                <p>Price: $4</p>
-                <button class="add-btn" data-product="Rice" data-price="3">
-                    Add to Shopping List
-                </button>
-            </div>
-
-            <div class="product-item">
-                <strong>Bao</strong>
-                <img src="Clicker-Bao.png" width="175">
-                <p>Price: $4</p>
-                <button class="add-btn" data-product="Bao" data-price="3">
-                    Add to Shopping List
-                </button>
-            </div>
-
-            <div class="product-item">
-                <strong>Clicker Croissant</strong>
-                <img src="Clicker-Croissant.png" alt="Croissant" width="175">
-                <p>Price: $5</p>
-                <button class="add-btn" data-product="Croissant" data-price="5">
-                    Add to Shopping List
-                </button>
-            </div>
-
-        </section>
-
-        <section id="other">
-
-            <h2>Other</h2>
-
-            <div class="product-item">
-                <strong>Spinner Ring</strong>
-                <img src="Clicker-Spinner-Ring.png" width="175">
-                <p>Price: $2</p>
-                <button class="add-btn" data-product="Spinner Ring" data-price="2">
-                    Add to Shopping List
-                </button>
-            </div>
-
-            <div class="product-item">
-                <strong>Mouse-Scroller</strong>
-                <img src="Mouse-Scroller.png" alt="Mouse Scroller" width="175">
-                <p>Price: $3</p>
-                <button class="add-btn" data-product="Mouse-Scroller" data-price="3">
-                    Add to Shopping List
-                </button>
-            </div>
-
-            <div class="product-item">
-                <strong>Boba Switch</strong>
-                <img src="Boba-Switch.png" alt="Boba Switch" width="175">
-                <p>Price: $4</p>
-                <button class="add-btn" data-product="Boba Switch" data-price="4">
-                    Add to Shopping List
-                </button>
-            </div>
-
-        </section>
-
-        <section id="propeller">
-
-            <h2>Propeller</h2>
-
-            <div class="product-item">
-                <strong>Propeller Launcher</strong>
-                <p>Price: $6 (+2 for upgrade propeller)</p>
-                <button class="add-btn" data-product="Propeller Launcher" data-price="6">
-                    Add to Shopping List
-                </button>
-            </div>
-
-        </section>
+    
+            <section id="clickers">
+    
+                <h2>Clickers</h2>
+    
+                <div class="product-item">
+                    <strong>Pizza</strong>
+                    <img src="Clicker-Pizza.png" width="175">
+                    <p>Price: $5</p>
+                    <p>SOLD OUT! SORRY</p>
+                </div>
+    
+                <div class="product-item">
+                    <strong>Ramen Clicker</strong>
+                    <img src="Clicker-Ramen.png" width="175">
+                    <p>Price: $6</p>
+                    <p>SOLD OUT! SORRY</p>
+                </div>
+    
+                <div class="product-item">
+                    <strong>Coke Crate</strong>
+                    <img src="Clicker-Coke-Crate.png" width="175">
+                    <p>Price: $5</p>
+                    <p>SOLD OUT! SORRY</p>
+                </div>
+    
+                <div class="product-item">
+                    <strong>Keyboard</strong>
+                    <img src="Clicker-Keyboard.png" width="175">
+                    <p>Price: $5</p>
+                    <button class="add-btn" data-product="Keyboard" data-price="5">
+                        Add to Shopping List
+                    </button>
+                </div>
+    
+                <div class="product-item">
+                    <strong>Rice</strong>
+                    <img src="Clicker-Rice.jpeg" width="175">
+                    <p>Price: $4</p>
+                    <button class="add-btn" data-product="Rice" data-price="3">
+                        Add to Shopping List
+                    </button>
+                </div>
+    
+                <div class="product-item">
+                    <strong>Bao</strong>
+                    <img src="Clicker-Bao.png" width="175">
+                    <p>Price: $4</p>
+                    <button class="add-btn" data-product="Bao" data-price="3">
+                        Add to Shopping List
+                    </button>
+                </div>
+    
+                <div class="product-item">
+                    <strong>Clicker Croissant</strong>
+                    <img src="Clicker-Croissant.png" alt="Croissant" width="175">
+                    <p>Price: $5</p>
+                    <button class="add-btn" data-product="Croissant" data-price="5">
+                        Add to Shopping List
+                    </button>
+                </div>
+    
+            </section>
+    
+            <section id="other">
+    
+                <h2>Other</h2>
+    
+                <div class="product-item">
+                    <strong>Spinner Ring</strong>
+                    <img src="Clicker-Spinner-Ring.png" width="175">
+                    <p>Price: $2</p>
+                    <button class="add-btn" data-product="Spinner Ring" data-price="2">
+                        Add to Shopping List
+                    </button>
+                </div>
+    
+                <div class="product-item">
+                    <strong>Mouse-Scroller</strong>
+                    <img src="Mouse-Scroller.png" alt="Mouse Scroller" width="175">
+                    <p>Price: $3</p>
+                    <button class="add-btn" data-product="Mouse-Scroller" data-price="3">
+                        Add to Shopping List
+                    </button>
+                </div>
+    
+                <div class="product-item">
+                    <strong>Boba Switch</strong>
+                    <img src="Boba-Switch.png" alt="Boba Switch" width="175">
+                    <p>Price: $4</p>
+                    <button class="add-btn" data-product="Boba Switch" data-price="4">
+                        Add to Shopping List
+                    </button>
+                </div>
+    
+            </section>
+    
+            <section id="propeller">
+    
+                <h2>Propeller</h2>
+    
+                <div class="product-item">
+                    <strong>Propeller Launcher</strong>
+                    <p>Price: $6 (+2 for upgrade propeller)</p>
+                    <button class="add-btn" data-product="Propeller Launcher" data-price="6">
+                        Add to Shopping List
+                    </button>
+                </div>
+    
+            </section>
 
     </main>
 
     <script>
 
-    const buttons = document.querySelectorAll(".add-btn");
-
-    const products = [];
-    const prices = [];
-
-    const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyU5hjbC2mHHnctCjcnckOfNaWO5h_26seBUHY6FphPT-DL5RsLLnhkpISmyIG0LpVLaA/exec";
-
-
-    buttons.forEach(button => {
-
-        button.addEventListener("click", function(){
-
-            const productName = this.dataset.product;
-            const productPrice = this.dataset.price;
-
-            products.push(productName);
-            prices.push(Number(productPrice));
-
-            const list = document.getElementById("itemList");
-
-            const li = document.createElement("li");
-
-            li.textContent = productName + " - $" + productPrice;
-
-            list.appendChild(li);
-
-            console.log("Products:", products);
-            console.log("Prices:", prices);
-
+        const buttons = document.querySelectorAll(".add-btn");
+        
+        const products = [];
+        const prices = [];
+        
+        const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyU5hjbC2mHHnctCjcnckOfNaWO5h_26seBUHY6FphPT-DL5RsLLnhkpISmyIG0LpVLaA/exec";
+        
+        function updateTotal(){
+        
+            let total = prices.reduce((a,b)=>a+b,0);
+        
+            const promo = document.getElementById("promoCode").value;
+        
+            if(promo === "STUFF"){
+                total = total * 0.8;
+            }
+        
+            document.getElementById("totalBox").textContent =
+                "Total: $" + total.toFixed(2);
+        }
+        
+        document.getElementById("promoCode")
+            .addEventListener("input", updateTotal);
+        
+        
+        buttons.forEach(button => {
+        
+            button.addEventListener("click", function(){
+        
+                const productName = this.dataset.product;
+                const productPrice = this.dataset.price;
+        
+                products.push(productName);
+                prices.push(Number(productPrice));
+        
+                const list = document.getElementById("itemList");
+        
+                const li = document.createElement("li");
+        
+                li.textContent = productName + " - $" + productPrice;
+        
+                list.appendChild(li);
+        
+                updateTotal();
+        
+                console.log("Products:", products);
+                console.log("Prices:", prices);
+        
+            });
+        
         });
-
-    });
-
-
-    function sendOrder(){
-
-    const name = document.getElementById("customerName").value;
-    const promo = document.getElementById("promoCode").value;
-
-    const cart = products.join(", ");
-
-    const data = new URLSearchParams();
-
-    data.append("name", name);
-    data.append("cart", cart);
-    data.append("promo", promo);
-
-    fetch(WEB_APP_URL, {
-
-        method: "POST",
-        mode: "no-cors",
-        body: data
-
-    })
-    .then(() => {
-
-        alert("Order sent successfully!, Your product should arrive within 5 days.");
-
-    })
-    .catch(error => {
-
-        console.error(error);
-        alert("Order failed to send.");
-
-    });
-
-}
-
-</script>
+        
+        
+        function sendOrder(){
+        
+            const name = document.getElementById("customerName").value;
+            const promo = document.getElementById("promoCode").value;
+        
+            const cart = products.join(", ");
+        
+            const data = new URLSearchParams();
+        
+            data.append("name", name);
+            data.append("cart", cart);
+            data.append("promo", promo);
+        
+            fetch(WEB_APP_URL, {
+        
+                method: "POST",
+                mode: "no-cors",
+                body: data
+        
+            })
+            .then(() => {
+        
+                alert("Order sent successfully!, Your product should arrive within 5 days.");
+        
+            })
+            .catch(error => {
+        
+                console.error(error);
+                alert("Order failed to send.");
+        
+            });
+        
+        }
+        
+    </script>
 
 </body>
 </html>
